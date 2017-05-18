@@ -10,13 +10,14 @@ This git hook will fire on commit and check for:
 - PHP Linting
 - Newline at end of file
 - Incorrect line endings
+- $a = true (xdebug ftw ;) )
 
 This hook will only check features and custom directories (to reduce false positives
 from contrib commits.)
 
 Installing
 ----------
-Run `curl -fsSL https://raw.githubusercontent.com/andrewmriley/drupal-site-precommit/master/install > install`
+Run `curl -fsSL https://raw.githubusercontent.com/strykaizer/drupal-site-precommit/master/install > install`
 (or just download the install file however you want) and then in your repo's root
 run `php install`.
 
@@ -60,3 +61,7 @@ commit with a -n to skip the pre-commit hook.
 
 Example: `git commit -n`
 
+Credits
+-------
+Project by andrewmriley (https://github.com/andrewmriley/drupal-site-precommit)
+Very minor changes for my use-case in this repo. You should probably use the original repo instead.

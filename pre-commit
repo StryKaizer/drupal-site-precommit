@@ -70,6 +70,7 @@ function test_drupal_debug($file_w_full_path, $path_parts) {
   _search_in_file($check_extensions, $path_parts['extension'], '/dpm\(.*\)/i', 'dpm() found.');
   _search_in_file($check_extensions, $path_parts['extension'], '/dsm\(.*\)/i', 'dsm() found.');
   _search_in_file($check_extensions, $path_parts['extension'], '/kpr\(.*\)/i', 'kpr() found.');
+  _search_in_file($check_extensions, $path_parts['extension'], '/\$a\s?=\s?true/i', '$a = true found.');
 }
 
 function test_php_debug($file_w_full_path, $path_parts) {

@@ -3,7 +3,7 @@
 define('GIT_DIR', '.git');
 define('HOOKS_DIR', '.git/hooks');
 define('PRE_COMMIT_FILE', '.git/hooks/pre-commit');
-define('PRE_COMMIT_URL', 'https://raw.githubusercontent.com/andrewmriley/drupal-site-precommit/master/pre-commit');
+define('PRE_COMMIT_URL', 'https://raw.githubusercontent.com/strykaizer/drupal-site-precommit/master/pre-commit');
 
 $options = getopt(null, array('update::', 'uninstall::'));
 $is_update = isset($options['update']);
