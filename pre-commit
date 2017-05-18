@@ -21,8 +21,9 @@ if (count($git_output) > 0) {
       test_drupal_debug($file_w_full_path, $path_parts);
       test_js_debug($file_w_full_path, $path_parts);
       test_placeholder($file_w_full_path, $path_parts);
-      test_eof_newline($file_w_full_path, $path_parts);
-      test_eol_character($file_w_full_path, $path_parts);
+      test_lorem($file_w_full_path, $path_parts);
+      //test_eof_newline($file_w_full_path, $path_parts);
+      //test_eol_character($file_w_full_path, $path_parts);
       test_merge_conflict($file_w_full_path, $path_parts);
     }
   }
@@ -90,7 +91,12 @@ function test_js_debug($file_w_full_path, $path_parts) {
 
 function test_placeholder($file_w_full_path, $path_parts) {
   $check_extensions = array('js', 'php', 'module', 'inc', 'inc.php', 'tpl.php');
-  _search_in_file($check_extensions, $path_parts['extension'], '/lorem/i', 'Lorem placeholder text found.');
+  _search_in_file($check_extensions, $path_parts['extension'], '/ikbendeplaceholder/i', 'placeholder text found.');
+}
+
+function test_lorem($file_w_full_path, $path_parts) {
+  $check_extensions = array('js', 'php', 'module', 'inc', 'inc.php', 'tpl.php');
+  _search_in_file($check_extensions, $path_parts['extension'], '/lorem/i', 'Lorem text found.');
 }
 
 function test_eof_newline($file_w_full_path, $path_parts) {
